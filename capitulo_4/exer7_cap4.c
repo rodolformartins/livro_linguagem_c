@@ -39,6 +39,7 @@ int main(void){
         printf("\nVoce comprou o produto no mato grosso do sul, imposto de 12 por cento, valor total do produto: %.2f", impostoEstado);
     }
     break;
+    default: printf("\nVoce nao digitou um estado valido!");
     }
     return(0);
 }
