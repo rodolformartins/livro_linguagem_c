@@ -26,6 +26,8 @@ int main(void){
     media = soma / 5;
 
     printf("\nA media e: %d", media);
+
+    printf("\nteste");
     
     return(0);
 }
