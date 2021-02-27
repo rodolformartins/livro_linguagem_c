@@ -1,37 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 
 /*Crie uma estrutura para representar as coordenadas de um ponto no plano (posições X e Y). 
 Em seguida, declare e leia do teclado dois pontos e exiba a distância entre eles */
 
 struct coordenadas{
-    int X;
-    int Y;
+    float X;
+    float Y;
 };
 
 int main(void){
-    int X1, Y1;
+    struct coordenadas P1, P2;
+    float resultado;
 
-    //Lendo os dados da estrutura
-    struct coordenadas c;
-    printf("\nDigite o primeiro valor de X: ");
-    scanf("%d", &c.X);
 
-    printf("\nDigite o primeiro valor de Y: ");
-    scanf("%d", &c.Y);
+    //Perguntando as coordenadas do P1
+    printf("\nDigite a coordenada X do ponto 1: ");
+    scanf("%f", &P1.X);
 
-    printf("\nDigite o segundo valor de X: ");
-    scanf("%d", &X1);
+    printf("\nDigite a coordenada Y do ponto 1: ");
+    scanf("%f", &P1.Y);
 
-    printf("\nDigite o segundo valor de Y: ");
-    scanf("%d", &Y1);
+    //Perguntando as coordenadas do P2
+    printf("\nDigite a coordenada X do ponto 2: ");
+    scanf("%f", &P2.X);
 
-    //Exibindo a distância entre os dois pontos:
-    printf("\nDistância entre o ponto X: %d", c.X - X1);
+    printf("\nDigite a coordenada Y do ponto 2: ");
+    scanf("%f", &P2.Y);
 
-    printf("\nDistância entre o ponto X: %d", c.Y - Y1);
+    //Processando a distância entre os dois pontos:
+    resultado = pow(P1.X - P2.X,2) + pow(P2.X - P2.Y,2);
 
+    printf("Distância entre as duas coordenadas: %.2f\n", sqrt(resultado));
 
     return(0);
 }
